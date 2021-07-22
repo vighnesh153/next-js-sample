@@ -45,5 +45,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
     props: {
       time: new Date().toLocaleTimeString(),
     },
+    // This page will be re-built every 20 seconds
+    revalidate: 20,
   };
 };
